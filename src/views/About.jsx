@@ -1,6 +1,6 @@
 import { useState, useEffect, React } from 'react'
 import axios from 'axios'
-
+import '../index.scss'
 
 function About() {
   const [quienessomos, setQuienessomos] = useState('')
@@ -21,18 +21,18 @@ function About() {
   }, [])
   return (
     <div className="container column is-10  mt-6">
-      <h1 className="my-5 is-size-4">DyD Market</h1>
-      <form >
-        <div>
-          <p>Quienes Somos:</p>
+      <h1 className="my-5 is-size-4 title is-3">DyD Market</h1>
+      <form className='mt-3'>
+        <div className='mt-3'>
+          <p className='title is-4'>Quienes Somos:</p>
           <p>{quienessomos}</p>
         </div>
-        <div>
-          <p>Mision:</p>
+        <div className='mt-3'>
+          <p className='title is-4'>Mision:</p>
           <p>{mision}</p>
         </div>
-        <div>
-          <p>Vision:</p>
+        <div className='mt-3'>
+          <p className='title is-4'>Vision:</p>
           <p>{vision}</p>
         </div>
       </form>
