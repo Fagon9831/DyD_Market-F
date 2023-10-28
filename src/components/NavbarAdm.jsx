@@ -27,9 +27,6 @@ function NavbarAdm() {
                 <p className="menu-label">
                     Oportunidades
                 </p>
-                <ul className="menu-list">
-                    <li> <Link className="" to="/">Trabajos</Link></li>
-                </ul>
                 <p className="menu-label">
                     Sistema
                 </p>
