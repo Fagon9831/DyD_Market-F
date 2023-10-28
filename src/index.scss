@@ -1,0 +1,258 @@
+@import 'bulma/css/bulma.css';
+
+$tema_p: #102E44;
+$tema_p2: rgb(24, 69, 102);
+$tema_p3: rgb(4, 39, 136);
+$tema_icon: #87f9f7;
+$color_textNB: #FFFFFF;
+$colo_red: #FE0039;
+img.img-card{
+    width: 20px;
+    height: 20px;
+    filter: invert(87%) sepia(90%) saturate(7177%) hue-rotate(154deg) brightness(116%) contrast(95%);   
+}
+img.img-card:hover{
+    width: 20px;
+    height: 20px;
+    filter: invert(87%) sepia(90%) saturate(7177%) hue-rotate(154deg) brightness(116%) contrast(95%);   
+}
+.card{
+    &-icon{
+        width: 20px;
+        height: 20px;
+        margin-left: 10px;                            
+    }
+    &-ashop{
+        background-color: $tema_p3;
+        color: $color_textNB;
+        border-radius: 7px;
+        img,img:hover{
+            filter: invert(87%) sepia(90%) saturate(7177%) hue-rotate(154deg) brightness(116%) contrast(95%);
+        }
+        
+    }
+
+}
+.nav {
+    &-p {
+        background-color: $tema_p2;
+
+        &2 {
+            a:hover {
+                background-color: $tema_p2;
+            }
+
+            a:focus {
+                background-color: $tema_p2;
+            }
+        }
+
+        &3 a {
+            background-color: $tema_p2;
+        }
+    }
+
+    &bar-item,
+    &bar-link {
+        color: $color_textNB;
+        background-color: $tema_p2;
+    }
+
+}
+
+.navbar-item.has-dropdown:hover .navbar-link {
+    background-color: $tema_p2;
+}
+
+.navbar-dropdown a.navbar-item:hover {
+    background-color: $tema_p2;
+    color: #485fc7
+}
+.navbar-dropdown a.navbar-item:focus {
+    background-color: $tema_p2;
+    color: #485fc7
+}
+
+.img-200px {
+    width: 200px;
+    height: auto;
+}
+
+.pm-card {
+    width: 99%;
+
+    &-card {
+        margin: 2px;
+        padding: 1px;
+        width: 24%;
+
+        :hover {
+            cursor: pointer;
+        }
+    }
+
+    :hover {
+        filter: grayscale(10%);
+    }
+
+    &-img {
+        :hover {
+            cursor: zoom-in;
+        }
+    }
+}
+
+*::after,
+*::before,
+
+.icon-cart {
+	width: 40px;
+	height: 40px;
+	stroke: $tema_icon;
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+.container-icon {
+	position: relative;
+}
+
+.count-products {
+	position: absolute;
+	top: 55%;
+	right: 0;
+
+	background-color: #000000;
+	color: #fff;
+	width: 25px;
+	height: 25px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+}
+
+#contador-productos {
+	font-size: 12px;
+}
+
+.container-cart-products {
+	position: absolute;
+	top: 50px;
+	right: 0;
+    max-height: 400px; 
+    overflow-y: auto;
+	background-color: #fff;
+	width: 500px;
+	z-index: 1;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+	border-radius: 10px;
+}
+
+.cart-product {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 30px;
+
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.info-cart-product {
+	display: flex;
+	justify-content: space-between;
+	flex: 0.8;
+}
+
+.titulo-producto-carrito {
+	font-size: 20px;
+}
+
+.precio-producto-carrito {
+	font-weight: 700;
+	font-size: 20px;
+	margin-left: 10px;
+}
+
+.cantidad-producto-carrito {
+	font-weight: 400;
+	font-size: 20px;
+    margin-right:20px ;
+    background-color: lightgray;
+    width: 35px;
+	height: 35px;
+    text-align: center;
+    border-radius: 50px;
+}
+
+.icon-close {
+	width: 25px;
+	height: 25px;
+    &:hover{
+        stroke: red;
+        cursor: pointer;
+    }
+}
+
+
+.cart-total {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px 0;
+	gap: 20px;
+    h3{
+        font-size: 20px;
+        font-weight: 700;
+    }
+}
+
+.total-pagar {
+	font-size: 20px;
+	font-weight: 900;
+}
+
+.hidden-cart {
+	display: none;
+}
+
+.container-items {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 20px;
+}
+
+
+.cart-empty {
+	padding: 20px;
+	text-align: center;
+}
+
+.hidden {
+	display: none;
+}
+
+.btn-clear-all {
+	border: none;
+	background-color: $colo_red;
+	color: #fff;
+	padding: 15px 0;
+	display: block;
+	width: 100%;
+	margin-top: 10px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	font-family: inherit;
+	cursor: pointer;
+  font-size: 16px;
+  transition: all .3s ease;
+  &:hover{
+    background-color: $colo_red;
+    transform: scale(1.03);
+    border-radius: 0;
+    border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+  }
+}
